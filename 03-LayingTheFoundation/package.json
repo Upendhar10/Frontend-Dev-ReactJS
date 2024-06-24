@@ -1,0 +1,30 @@
+{
+  "name": "03-layingthefoundation",
+  "version": "1.0.0",
+  "description": "This is code for Chapter-03 of the Namastha React course",
+  "type": "module",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "parcel",
+    "babel",
+    "node",
+    "npm"
+  ],
+  "author": "Upendhar",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
