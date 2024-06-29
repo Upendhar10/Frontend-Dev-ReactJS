@@ -1,0 +1,6 @@
+// #  removes all the console.logs in our application
+
+// with options 
+{
+    // "plugins": [["transform-remove-console", { "exclude": ["error", "warn"] }]]
+}
