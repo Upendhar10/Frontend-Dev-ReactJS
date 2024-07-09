@@ -110,7 +110,7 @@ SURNAME='Singh'
 ### React provides a bunch of standard in-built hooks:
 
 - `useState`:
-  - To manage states.
+  - To manage states
   - Returns a stateful value and an updater function to update it.
 - `useEffect`:
   - To manage side-effects like API calls, subscriptions, timers, mutations, and more.
