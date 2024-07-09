@@ -1,0 +1,27 @@
+{
+  "name": "06-foodville-part03",
+  "version": "1.0.0",
+  "description": "Sixth Chapter of the Namastha React Course",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "react-dom",
+    "parcel",
+    "babel"
+  ],
+  "author": "Upendhar",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  }
+}
