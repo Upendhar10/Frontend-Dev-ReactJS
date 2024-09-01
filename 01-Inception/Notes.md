@@ -8,12 +8,18 @@
 
 ## Library Vs Framework
 
-- A library is a collection of packages that perform specific operations whereas, a framework contains the basic flow and architecture of an application.
+- A library is a collection of packages that perform specific operations whereas, a framework contains the basic workflow and architecture of an application.
 - The major difference between them is the complexity.
 
-  - Libraries contain a number of methods that a developer can just call whenever they write code.
-  - The framework provides the flow of a software application and tells the developer, what it needs and calls the code provided by the developer as required.
+  - A library is a collection of prewritten code that can be used to simplify tasks.
+  - It provides numerious methods that a developer can just execute as per their requirements.
+  - Frameworks make development easier by providing a common platform from which developers can control most of the software development process. They states the developer, what it needs and executes the code provided by the developer as required.
   - ReactJs is a library and Express is a Framework.
+
+- For example :
+
+  - Library is like building your home from the ground up. The house can be made in any style you prefer and the rooms can be arranged and decorated however you like.
+  - Framework, on the other hand, is like buying a new home. The house is already built, so you don’t have to worry about building problems, but you can’t choose how the rooms are arranged.
 
 - please refer to this [article.](https://www.interviewbit.com/blog/framework-vs-library/)
 
@@ -34,13 +40,13 @@
 - The React package contains
   - React.createElement(),
   - React.Component,
-  - React.Children, and
-- other helpers related to elements and component classes, these can be thought as the universal helpers that we need to build components.
-- The React-DOM package contains ReactDOM.render(), and in react-dom/server we have server-side rendering support with ReactDOMServer.renderToString() and ReactDOMServer.renderToStaticMarkup().
+  - React.Fragment, and
+- other helpers related to elements and component classes, that can be thought as the universal helpers that we need to build components.
+- The React-DOM package contains ReactDOM.render(), and in react-dom/server we have server-side rendering support.
 
-## crossorigin Attribute
+## Crossorigin Attribute
 
-- The crossorigin attribute in script tag sets the mode of the request to an HTTP CORS Request.
+- The crossorigin attribute in **script** tag sets the mode of the request to an HTTP CORS Request.
 - The purpose of crossorigin attribute is to share the resources from one domain to another domain.
 - Basically, It is used to handle the CORS request, that checks whether it is safe to allow for sharing the resources from other domains.
 
@@ -62,7 +68,7 @@
 
   1. HTML parsing. (building DOM tree)
   2. Loading of the Script files
-     1. Fetching of the script files from the newtwork/ server.
+     1. Fetching of the script files from the network/ server.
      2. Executing the script file line by line.
 
 - ### Without any attribute
@@ -116,13 +122,13 @@
 
 ## Module :
 
-- `module` keyword allows you to import modules, which makes it easier to organize your code.
+- `module` keyword allows us to import modules, which makes it easier to organize our code.
 
   1. Enables strict mode by default. This makes your code run faster, and reports more runtime errors instead of silently ignoring them.
-  2. Execute your code only after the DOM has initialized (similar to defer), which makes DOM manipulation easier.
-  3. Thanks to this, you won't need to listen to load / readystatechange / DOMContentLoaded events.
+  2. Executes code only after the DOM has initialized (similar to defer), which makes DOM manipulation easier.
+  3. Thanks to this, we won't need to listen to load / readystatechange / DOMContentLoaded events.
   4. Prevent top level variables from implicitly polluting the global namespace.
-  5. Allow you to use top-level await in supported engines.
+  5. Allows to use top-level await in supported engines.
   6. Load and parse your code asynchronously, which improves load performance.
 
   ```

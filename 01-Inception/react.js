@@ -1,8 +1,8 @@
 // # creating a child to a div using React
 
-const heading = React.createElement("h1", {}, "Frontend Dev");
-
 const cont3 = ReactDOM.createRoot(document.getElementById("cont3"));
+
+const heading = React.createElement("h1", {}, "Frontend Dev");
 
 // cont3.render(heading);
 
@@ -18,5 +18,4 @@ const CourseInfo = React.createElement("div", { id: "CourseInfo" }, [
   h2instructor,
 ]);
 
-// cont4.render(CourseInfo); // Only single root element allowed in the HTML document
 cont3.render(CourseInfo);
