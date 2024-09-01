@@ -2,10 +2,10 @@
 
 ## NPM
 
-- It is a tool used for package management and the default package manager for Node projects.
-- `NPM is installed when NodeJS` is installed on a machine.
+- NPM is a widely used package management tool and it is the default package manager for Node projects.
+- `NPM is installed automatically when NodeJS` is installed on a machine.
 - It comes with a command-line interface (CLI) used to interact with the online database of NPM.
-- This database is called the NPM Registry, and it hosts public and private 'packages.'
+- This database is called the NPM Registry, and it hosts public and private `packages`.
 - To add or update packages, we use the NPM CLI to interact with this database.
 - `npm` alternative is `yarn`
 
@@ -40,7 +40,7 @@
 - Zero Configuration
 - Automatic code splitting
 
-### installation commands:
+### Installation commands:
 
 - Install parcel as a devDependency.
 - `-D` is used for development and installed as a development dependency.
@@ -63,7 +63,7 @@
 
 - `npx` - node package xecuter.
 - `npx` is a tool that is used to execute the packages in Node.js environment.
-- By default included in npm above 5.2.0 versions.
+- By default this tool is included in npm above 5.2.0 versions.
 - It is an npm package runner that can execute any package that we want from the npm registry without even installing that package.
 
 ## dependencies vs devDependencies

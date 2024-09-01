@@ -1,12 +1,11 @@
 {
   "name": "chapter02-ignitingtheapp",
   "version": "1.0.0",
-  "description": "This is the Second Chapter of the Namastha react course",
+  "description": "This is the Second Chapter of the React course",
   "main": "index.js",
   "scripts": {
-    "start" : "parcel index.html",
-    "build" : "parcel build index.html",
-    "test": "jest"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "keywords": [
     "npm",
