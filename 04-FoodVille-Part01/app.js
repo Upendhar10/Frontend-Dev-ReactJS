@@ -66,11 +66,9 @@ const Body = () => {
   return (
     <div className="body">
       <div className="restaurants">
-        {
-            restaurantList.map((RestroInfoObj) => {
-                return <RestroCard {...RestroInfoObj} key={RestroInfoObj.id} />;
-            })
-        }
+        {restaurantList.map((RestroInfoObj) => {
+          return <RestroCard {...RestroInfoObj} key={RestroInfoObj.id} />;
+        })}
       </div>
     </div>
   );

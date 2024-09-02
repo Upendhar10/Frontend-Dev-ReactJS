@@ -1,4 +1,4 @@
-// restaurnatList is build from live data of the Swiggy API
+// # restaurantList is build from live data of the Swiggy API
 
 const restaurantList = [
   {

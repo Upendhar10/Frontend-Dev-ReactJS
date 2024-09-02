@@ -1,10 +1,11 @@
 // # React Fragment in React
+
 /*
 # React.Fragment: 
     - is a component exported by "react", 
     - It is like an empty tag,  <> </>
 
--> JSX can have only one parent, but we want two HTML tags in the JSX we either use 'div' tag or we use React.Fragment
+-> JSX can have only one parent, but we want two HTML tags in the JSX, we either use 'div' tag or we use React.Fragment
 
 */
 
@@ -19,17 +20,16 @@ const AppLayout = () => {
   {
     /*
 
-        # React.fragment
-            <React.Fragment>
-            <h1>Namastha React</h1>
-            <h2>Akshay Saini</h2>
-            </React.Fragment>
+      # React.fragment
+          <React.Fragment>
+          <h1>Namastha React</h1>
+          <h2>Akshay </h2>
+          </React.Fragment>
         
 
         -> If we want to style (inline) using react then , we use objects
         -> If we are using empty tags , then we should make them as 'div' then we can style it.
-
-        */
+    */
   }
 
   return (
@@ -42,7 +42,7 @@ const AppLayout = () => {
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// # Hardcoding the Data
+// # Hardcoding the Data into the card directly
 
 const RestroCard0 = () => {
   return (
@@ -55,7 +55,7 @@ const RestroCard0 = () => {
   );
 };
 
-// # Getting data from object directly
+// # Getting data from object into the card
 
 const burgerKing = {
   name: "burgerKing",
@@ -88,21 +88,21 @@ const Body1 = () => {
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// # Getting specific data from restaurantList file [Static data]
+// # Getting specific data from external file (restaurantList file [Static data])
 
 // We can also pass multiple props at once
 
-const RestroCard2 = () => {
+const RestroCard2 = (props) => {
   return (
     <div className="restroCard">
       <img
         src={
           "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          restaurantList[1].cloudinaryImageId
+          props.restro.cloudinaryImageId
         }
       />
-      <h2>{restaurantList[1]?.name}</h2>
-      <h4>{restaurantList[1]?.cuisines.join(" , ")}</h4>
+      <h2>{props?.restro?.name}</h2>
+      <h4>{props?.restro?.cuisines.join(" , ")}</h4>
     </div>
   );
 };
@@ -111,15 +111,15 @@ const Body2 = () => {
   return (
     <div className="restaurants">
       <RestroCard2 restro={restaurantList[1]} />
-      {RestroCard2(restaurantList[1])} // similar to the above statement
-      {/* <RestroCard2 restro = {restaurantList[1], hello="world"}/> // multiple props */}
+      {/* {RestroCard2(restaurantList[1])} // similar to the above statement, but should be avoided in React since this syntax effects lifecycle methods. */}
+      {/* <RestroCard2 restro = {restaurantList[1]} hello="world"/> // multiple props */}
     </div>
   );
 };
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// # Getting complete data from restaurantList  [Dynamically]
+// # Getting complete data from restaurantList at once [Dynamically]
 
 // displaying specific restaurant from restaurantList
 const RestroCard3a = (props) => {
@@ -154,7 +154,7 @@ const RestroCard3b = (props) => {
   );
 };
 
-// Destructing of props ; Method-1
+// Destructing of props ; levl-1
 
 const RestroCard3c = ({ restro }) => {
   console.log(restro); // restro = { cloudinaryImageId, name, cuisines, locality} of each restaurant passed as argument
@@ -172,7 +172,7 @@ const RestroCard3c = ({ restro }) => {
   );
 };
 
-// Destructing of props ; Method-2
+// Destructing of props ; level-2
 const RestroCard3d = ({ cloudinaryImageId, name, cuisines, locality }) => {
   return (
     <div className="restroCard">
@@ -210,10 +210,10 @@ const Body3 = () => {
   return (
     <div className="restaurants">
       {/* Method-3a */}
-      {/* {RestroCard ({restaurantList})} */}
+      {/* {RestroCard ({restaurantList})} */} // This incorrect of doing stuff
+      in React, should be avoided.
       {/* <RestroCard {...{restaurantList}}/> */}
-
-      {/* // method-3c
+      {/* // method-3b
         <RestroCard 
         cloudinaryImageId = {restaurantList[0].cloudinaryImageId}
         name = {restaurantList[0].name} 
@@ -221,13 +221,14 @@ const Body3 = () => {
         locality = {restaurantList[0].locality}
         /> 
         */}
-
+      {/* // method-3c
+        <RestroCard key={0} restro={restrantList[0]}/> 
+        */}
       {/* 
             // method-3d // spread operator
-        <RestroCard {...restaurantList[0]}/> 
-        <RestroCard {...restaurantList[1]}/>
-        <RestroCard {...restaurantList[2]}/>
-
+        <RestroCard key={0} {...restaurantList[0]}/> 
+        <RestroCard key={1} {...restaurantList[1]}/>
+        <RestroCard key={2} {...restaurantList[2]}/>
         */}
     </div>
   );
@@ -235,7 +236,7 @@ const Body3 = () => {
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// Getting complete data from all restaurantList as once using a map function
+// Getting complete data from all restaurantList as once using a map function + spread operator
 
 const RestroCard3e = ({ cloudinaryImageId, name, cuisines, locality }) => {
   return (
@@ -255,60 +256,13 @@ const RestroCard3e = ({ cloudinaryImageId, name, cuisines, locality }) => {
 
 const Body4 = () => {
   console.log(restaurantList);
-  return {
-    // <div className="restaurants">
-    //     restaurantList.map((RestroInfoObj)=> {
-    //     return <RestroCard3e {...RestroInfoObj}/>;
-    //     })
-    // </div>
-  };
-};
-
-<div className="restaurants">
-  <RestroCard {...restaurantList} />
-</div>;
-
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-const Body = () => {
   return (
     <div className="restaurants">
-      {/*
-           # method-1  : loads only first card
-        <RestroCard/>                           //  restaurantList[0]    
-        {RestroCard (restaurantList[0])}        // not loading 
-        */}
-
-      {/* 
-            # method-2 : loads only specified card
-        <RestroCard restaurant = {restaurantList[1], hello="world"}/> // multiple props
-        - Here, restaurant is called a prop
-        */}
-
-      {/* {RestroCard({restaurant})} */}
-
-      {/* <RestroCard restaurant = {restaurantList[1]}/> */}
-
-      {/* <RestroCard 
-        cloudinaryImageId = {restaurantList[0].cloudinaryImageId}
-        name = {restaurantList[0].name} 
-        cuisines={restaurantList[0].cuisines}
-        locality = {restaurantList[0].locality}
-        /> */}
-
-      {/* 
-
-        <RestroCard {...restaurantList[1]}/> 
-        <RestroCard {...restaurantList[0]}/>
-        <RestroCard {...restaurantList[1]}/>
-
-        */}
-
-      {/* {
-            restaurantList.map((RestroInfoObj)=> {
-                return <RestroCard {...RestroInfoObj}/>;
-            })
-        } */}
+      {restaurantList.map((RestroInfoObj, index) => (
+        <RestroCard3e key={index} {...RestroInfoObj} />
+      ))}
     </div>
   );
 };
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
