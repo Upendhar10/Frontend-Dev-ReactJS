@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// # this is called as a React-element
+// # this is an example of React-element
 const heading = React.createElement(
   "h1",
   {
@@ -16,7 +16,7 @@ const heading = React.createElement(
 /*
     # React.createElement => Object => HTML element [DOM]
 
-    # Although creating a single child to a div seems simple in React, 
+    # Although creating a single child to a 'div' seems simple in React, 
     but the difficulty araises when we want to create a structure like below (nested div)
 
     <div>
@@ -28,24 +28,20 @@ const heading = React.createElement(
         </ul>
     </div>
 
-    
     # Inorder to solve this problem, 
-        - React provides an another way to create elements in React, i.e., JSX - JavaScriptXML (not Offical).
-        - Using JSX, the idea is to write the most of the HTML using the JavaScript
-        - JSX has a HTML like syntax but it should not be considered as JSX == (HTML inside JS)
-
+        - React provides an another way to create elements i.e., JSX - JavaScriptXML (not Offical).
+        - Using JSX, the idea is to write most of the HTML using the JavaScript
+        - JSX has a HTML like syntax but it should not be considered as JSX === (HTML inside JS), hence its is unOffficial
 
     # Workflow : 
+    - Babel is a free and open-source JavaScript transcompiler that is mainly used to convert ECMAScript 2015+ code into backwards-compatible JavaScript code that can be run by older JavaScript engines.
     - Babel converts JSX into React.createElement
-    JSX => React.createElement => Object => HTML element [DOM]
+      JSX => React.createElement => Object => HTML element [DOM]
 
     # Advantages :
-    - JSX is more readable than React.createElement
-    - JSX is maintainable
     - JSX is the syntactic sugar for React.createElement
-    - Avoids repeative code
-    - Developer friendly
-    - JSX is not packages and so, no need to import it manually
+    - JSX eliminates repeative code, making it more readable and maintainable than React.createElement, as a result it is Developer friendly.
+    - JSX is not a package and hence, there is no need to import it manually
     - JSX is powerful and secure (sanitaization)
 */
 

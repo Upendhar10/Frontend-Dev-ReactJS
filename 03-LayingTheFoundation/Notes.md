@@ -9,7 +9,9 @@
 - npx - used to execute the npm packages
 - npm - used to install the npm packages into our project.
 - Tree shaking - removing unwanted code.
-- Babel - Babel converts new version of the code into suitable older versions; Babel uses 'browsers-list'; Babel also converts JSX into JS understandable code.
+- Babel - Babel converts new version of the code into suitable older versions;
+- Babel uses 'browsers-list';
+- Babel also converts JSX into JS understandable code.
 - Polyfill - replacement code for a newer version of the code
 - babel-plugin-transform-remove-console : a plugin / package used to remove console.logs from the project; It is a dev-dependency
 - Keys - used to uniquely identifies each child of the DOM. It is passed through props
@@ -53,11 +55,11 @@ function greeting(user) {
 
 ## Role of type `attribute` in script tag? What `options can I use` there?
 
-- The 'type' attribute specifies the type of the script.
-- The 'type' attribute identifies the content between the <script> and </script> tags.
-- It has a Default value which is “text/javascript”.
+- The `type` attribute specifies the type of the script.
+- The `type` attribute identifies the content between the <script> and </script> tags.
+- It has a Default value which is `text/javascript`.
 
-- 'type' attribute can be of the following types:
+- `type` attribute can be of the following types:
 
   1. text/javascript : It is the basic standard of writing javascript code inside the `<script> </script>`tag.
 
@@ -65,9 +67,11 @@ function greeting(user) {
 
   2. text/ecmascript : this value indicates that the script is following the EcmaScript standards.
 
-  - `module`: This value tells the browser that the script is a module that can import or export other files or modules inside it.
-  - `text/babel` : This value indicates that the script is a babel type and required babel to transpile it.
-  - `text/typescript`: As the name suggest the script is written in TypeScript.
+  3. `module`: This value tells the browser that the script is a module that can import or export other files or modules inside it.
+
+  4. `text/babel` : This value indicates that the script is a babel type and required babel to transpile it.
+
+  5. `text/typescript`: As the name suggest the script is written in TypeScript.
 
 ## `{TitleComponent}` vs `{<TitleComponent/>}` vs `{<TitleComponent></TitleComponent>}` in `JSX`.
 

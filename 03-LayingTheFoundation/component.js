@@ -3,12 +3,8 @@ import ReactDOM from "react-dom/client";
 
 /*
     # React Components :
-        1. Functional component 
-            -> Modern way 
-            -> Just a javascript function that return a JSX expression or a react Element
-        2. Class-based component -> legacy way/ older way
-
-    - Name of the component starts with capital letter (not mandatory, just a good practise).
+      1. Functional component -> Modern way 
+      2. Class-based component -> legacy way/ older way
 */
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -21,9 +17,14 @@ const reactElem = (
   </h1>
 );
 
-// # Functional Component in React
-// Functional Component is nothing but a Javascript function by the end
-// React Element is nothing a Javascript Object by the end
+/*
+  # Functional Component in React
+    - Functional Component is nothing but a Javascript function by the end
+    - Functional Component returns a JSX expression or a react Element.
+    - React Element is nothing a Javascript Object by the end.
+    
+    - Name of the component should starts with capital letter (not mandatory, just a good practise).
+*/
 
 const HeaderComponent1 = function () {
   return <h1>HeaderComponent1</h1>;
@@ -64,20 +65,15 @@ const title = (
 
 // # ReactComponent in Other ReactComponent
 
-// const Title = () => (
-//     <h1>Title Functional Component</h1>
-// )
-
 const Title = () => {
   return <h1>Title Functional Component</h1>;
 };
 
-// Js
-var x = 100;
-
-// # Component composition Or Composing components => Nested components
-// {Title ()} is same as <Title/>
-// Same as Title and x , we can write any Js code in b/w {} in the Functional component.
+/*
+  - Component composition Or Composing components => Nested components
+  - {Title ()} is same as <Title/>
+  - we can write any piece of Js expressions in b/w {} in the Functional component.
+*/
 
 const HeaderComponent4 = () => {
   return (

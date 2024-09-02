@@ -1,6 +1,6 @@
 # Coding Assignment:
 
-## Tsk-1
+## Task-1
 
 - Create a `Nested header Element` using `React.createElement`(h1,h2,h3 inside a div with class "title")
 - Create the `same element using JSX`
