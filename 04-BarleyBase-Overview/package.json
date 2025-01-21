@@ -1,0 +1,23 @@
+{
+  "name": "04-project-setup",
+  "version": "1.0.0",
+  "description": "Chapter 04 of the React Course",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx parcel index.html",
+    "build": "npx parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
+    "babel": "^6.23.0",
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
