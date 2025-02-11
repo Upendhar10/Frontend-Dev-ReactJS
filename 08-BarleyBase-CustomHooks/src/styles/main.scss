@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+$primary-color: #000;
+
+body {
+  font-family: "Arial", sans-serif;
+  color: $primary-color;
+  background-color: #f7f1e3;
+}
+
+.wrapper {
+  max-width: 90%;
+  margin: auto;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid black;
+  position: sticky;
+  background: #f7f1e3;
+  top: 0;
+}
+
+.logoDiv {
+  height: 70px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.NavLinks {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  p {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .cart {
+    font-size: 2rem;
+  }
+
+  p:hover {
+    color: #c88509;
+    cursor: pointer;
+  }
+}
+
+// ------------------------------------------------------------------------------------
+
+.brewerys {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block: 1rem;
+}
+
+.BrewCard {
+  max-height: 200px;
+  width: 300px;
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 10px;
+
+  h2 {
+    font-size: 1.2rem;
+    color: #c88509;
+  }
+
+  &:hover {
+    box-shadow: 3px 3px 0px 0px #000;
+  }
+}
+
+.SearchFeature {
+  min-height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .SearchInput {
+    max-width: 300px;
+    padding: 0.5rem 1.2rem;
+    outline-color: #c88509;
+  }
+
+  .SearchBtn {
+    padding: 0.6rem 1.2rem;
+    background-color: #c88509;
+    border: none;
+    color: #fff;
+
+    &:hover {
+      color: #000;
+      cursor: pointer;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+/* Shimmer.css */
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.shimmer-card {
+  width: 300px;
+  max-height: 200px;
+  background: #c88509;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+// ----------------------------------------------------------------------------------
+
+.footer {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid black;
+}
