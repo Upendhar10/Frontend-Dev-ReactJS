@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+$primary-color: #000;
+
+body {
+  font-family: "Arial", sans-serif;
+  color: $primary-color;
+  // background-color: #f0f3f4f5;
+  background-color: #eef3f5f5;
+}
+
+.wrapper {
+  max-width: 90%;
+  margin: auto;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  // background: #f7f1e3;
+  background: #fff;
+  border-radius: 10px;
+  top: 2%;
+  padding-inline: 2rem;
+}
+
+.logoDiv {
+  height: 70px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.NavLinks ul {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+
+  li {
+    font-size: 1.25rem;
+    font-weight: 700;
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+
+  a:hover {
+    color: #f5a263;
+    cursor: pointer;
+  }
+}
+
+.cart {
+  font-size: 2rem;
+
+  :hover {
+    color: #f5a263;
+    cursor: pointer;
+  }
+}
+
+.nav-btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logStatus button {
+  padding: 0.75rem 2rem;
+  border-radius: 10px;
+  border: none;
+  background: #f5a263;
+  color: #ffff;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  :hover {
+    background: #a74f0c;
+  }
+}
+
+.heroSection {
+  display: grid;
+  place-content: center;
+}
+
+.heroSection .heroText {
+  margin: 4rem auto;
+  max-width: 800px;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.heroText h1 strong {
+  color: #f5a263;
+}
+
+.heroText p {
+  color: red;
+  margin-block: 1rem;
+}
+
+.heroText button {
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  border: none;
+  background: #f5a263;
+  color: #ffff;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.heroImg {
+  margin: 0 auto;
+  max-width: 80%;
+
+  img {
+    width: 100%;
+  }
+}
+
+// ------------------------------------------------------------------------------------
+
+.brewerys {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+
+.BrewCard {
+  height: 300px;
+  width: 275px;
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #fff;
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    color: #c88509;
+  }
+
+  p {
+    padding: 0.5rem;
+  }
+
+  &:hover {
+    box-shadow: 5px 5px 0px 0px #000;
+  }
+}
+
+.BreweryDetails {
+  display: grid;
+  place-content: center;
+  margin-block: 2rem;
+}
+
+.BreweryDetailsCard {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background-color: #fff;
+
+  p {
+    padding: 1.25rem;
+  }
+}
+
+.SearchFeature {
+  min-height: 100px;
+
+  margin-top: 3rem;
+
+  .searchFt {
+    border: 2px solid #000;
+    border-radius: 10px;
+    max-width: 350px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .SearchIcon {
+    font-size: 2rem;
+  }
+
+  .SearchInput {
+    min-width: 310px;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+    outline: none;
+    border: none;
+    overflow: hidden;
+  }
+
+  .SearchBtn {
+    padding: 0.6rem 1.2rem;
+    background-color: #c88509;
+    border: none;
+    color: #fff;
+
+    &:hover {
+      color: #000;
+      cursor: pointer;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+/* Shimmer.css */
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.shimmer-card {
+  width: 300px;
+  max-height: 200px;
+  background: #c88509;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+// ----------------------------------------------------------------------------------
+
+.techstack {
+  font-size: 1.25rem;
+}
+
+.about h2 {
+  text-align: center;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.accordion {
+  border: 2px solid black;
+  padding: 1rem 1.5rem;
+  min-width: 900px;
+}
+
+.accordion .acc-Q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contactUs,
+.about {
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  padding-block: 3rem;
+
+  h1 {
+    text-align: center;
+    color: #f5a263;
+    text-transform: uppercase;
+  }
+}
+
+.contactUs form {
+  // background-color: red;
+  min-width: 400px;
+  display: grid;
+  gap: 1.2rem;
+
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #f5a263;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.formInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.formInput input {
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+}
+
+// ----------------------------------------------------------------------------------
+
+.footer {
+  background-color: #ffff;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+}
