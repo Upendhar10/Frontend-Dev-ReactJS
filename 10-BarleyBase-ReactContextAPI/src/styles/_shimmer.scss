@@ -1,0 +1,14 @@
+.shimmer-container {
+  @include flex-center(20px);
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.shimmer-card {
+  width: 300px;
+  max-height: 200px;
+  background: $accent-color;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}

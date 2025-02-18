@@ -1,0 +1,12 @@
+.logStatus button,
+.heroText button {
+  @include button-style;
+}
+
+.contactUs form button {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  @include button-style;
+}

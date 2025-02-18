@@ -1,0 +1,44 @@
+.brewerys {
+  @include flex-center(1rem);
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-block: 1rem;
+
+  .BrewCard {
+    width: 275px;
+    height: 300px;
+    padding: 1rem;
+    border: 2px solid $border-color;
+    border-radius: 10px;
+    background-color: $white;
+
+    &:hover {
+      box-shadow: 5px 5px 0 0 $border-color;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      color: $accent-color;
+    }
+
+    p {
+      padding: 0.5rem;
+    }
+  }
+}
+
+.BreweryDetails {
+  @include grid-center;
+  margin-block: 2rem;
+
+  &Card {
+    border: 2px solid $border-color;
+    border-radius: 10px;
+    padding: 1.5rem;
+    background-color: $white;
+
+    p {
+      padding: 1.25rem;
+    }
+  }
+}

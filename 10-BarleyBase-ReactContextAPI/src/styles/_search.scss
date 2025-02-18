@@ -1,0 +1,33 @@
+.SearchFeature {
+  min-height: 100px;
+  margin-top: $section-padding;
+
+  .searchFt {
+    border: 2px solid $border-color;
+    border-radius: 10px;
+    max-width: 350px;
+    margin: 0 auto;
+    @include flex-center(0.5rem);
+
+    .SearchInput {
+      min-width: 310px;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      outline: none;
+      overflow: hidden;
+      font-size: 0.9rem;
+    }
+
+    .SearchBtn {
+      padding: 0.6rem 1.2rem;
+      background-color: $accent-color;
+      color: $white;
+      border: none;
+
+      &:hover {
+        color: $text-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

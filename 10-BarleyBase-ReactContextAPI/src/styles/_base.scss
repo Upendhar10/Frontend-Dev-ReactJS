@@ -1,0 +1,16 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: $base-font;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+.wrapper {
+  max-width: $container-max-width;
+  margin: 0 auto;
+}

@@ -1,0 +1,12 @@
+.footer {
+  @include flex-between;
+  max-height: 100px;
+  background-color: $white;
+  font-size: 0.8rem;
+  padding-inline: 2rem;
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+}

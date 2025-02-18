@@ -1,0 +1,10 @@
+.accordion {
+  border: 2px solid $border-color;
+  padding: 1rem 1.5rem;
+  min-width: 900px;
+
+  .acc-Q {
+    @include flex-between;
+    cursor: pointer;
+  }
+}

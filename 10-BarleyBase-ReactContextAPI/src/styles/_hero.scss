@@ -1,0 +1,32 @@
+.heroSection {
+  @include grid-center;
+
+  .heroText {
+    margin: 4rem auto;
+    max-width: 800px;
+    padding: 2rem;
+    text-align: center;
+    font-style: italic;
+    font-family: $heading-font;
+    line-height: 1.5;
+    font-size: 1.6rem;
+
+    h1 strong {
+      color: $secondary-color;
+    }
+
+    p {
+      color: red;
+      margin-block: 1rem;
+    }
+  }
+
+  .heroImg {
+    margin: 0 auto;
+    max-width: 80%;
+
+    img {
+      width: 100%;
+    }
+  }
+}

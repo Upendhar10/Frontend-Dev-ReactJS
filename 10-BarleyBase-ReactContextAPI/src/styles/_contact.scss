@@ -1,0 +1,30 @@
+.contactUs {
+  @include grid-center;
+  gap: 2rem;
+  padding-block: $section-padding;
+
+  h1 {
+    color: $secondary-color;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  form {
+    min-width: 400px;
+    display: grid;
+    gap: 1.2rem;
+
+    .formInput {
+      @include flex-between;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: 600;
+
+      input {
+        border: none;
+        outline: none;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}

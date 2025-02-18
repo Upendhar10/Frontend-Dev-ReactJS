@@ -1,0 +1,48 @@
+.Header {
+  @include flex-between;
+  position: sticky;
+  top: 2%;
+  padding-inline: 2rem;
+  background: $white;
+  border-radius: 10px;
+
+  .logoDiv {
+    height: 70px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .NavLinks ul {
+    @include flex-center($nav-gap);
+
+    li {
+      font-size: 1.25rem;
+      font-weight: 700;
+      list-style-type: none;
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  .cart {
+    font-size: 2rem;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .nav-btns {
+    @include flex-center(2rem);
+  }
+}
